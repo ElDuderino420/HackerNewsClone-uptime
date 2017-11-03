@@ -21,7 +21,7 @@ app.get('/', function(req, res){
 app.get('/status', function(req, res){
     
     // send request
-    request('http://188.226.152.93:8080/', function (error, response, body) {
+    request('http://188.226.152.93:3000/', function (error, response, body) {
         // Website is up
         if (!error && res.statusCode === 200) {
             console.log("200 OK!");
