@@ -25,19 +25,19 @@ app.get('/status', function(req, res){
         // Website is up
         if (!error && res.statusCode === 200) {
             console.log("200 OK!");
-            res.send("Running! Server responded with status code: " + res.statusCode);
+            res.send("Alive");
         }
 
         // No error but website not ok
         else if (!error) {
             console.log(res.statusCode);
-            res.send("Running! Server responded with status code: " + res.statusCode);
+            res.send("Alive");
         }
 
         // Loading error
         else {
             console.log(error);
-            res.send("Down! Server responded with status code: " + res.statusCode);
+            res.send("Down");
         }
     });
 
